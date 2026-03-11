@@ -1,0 +1,21 @@
+{
+  "name": "microlink-zapier-integration",
+  "version": "1.0.0",
+  "description": "Zapier CLI integration for Microlink API",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive test"
+  },
+  "dependencies": {
+    "zapier-platform-core": "^15.19.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.8.2",
+    "nock": "^14.0.5",
+    "zapier-platform-cli": "^17.5.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -5,15 +5,15 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive test"
+    "test": "node ./node_modules/mocha/bin/mocha --recursive test"
   },
   "dependencies": {
-    "zapier-platform-core": "^15.19.0"
+    "zapier-platform-core": "18.2.3"
   },
   "devDependencies": {
     "mocha": "^10.8.2",
     "nock": "^14.0.5",
-    "zapier-platform-cli": "^17.5.1"
+    "zapier-platform-cli": "18.2.3"
   },
   "engines": {
     "node": ">=18.0.0"

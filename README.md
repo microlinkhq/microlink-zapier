@@ -85,11 +85,14 @@ Configured in `authentication.js` using Zapier `type: "custom"`.
 | Field | Type | Required | Description |
 |------|------|----------|-------------|
 | `apiKey` | password | No | Microlink Pro/Enterprise API key. If present, sent as `x-api-key` header. |
-| `baseUrl` | string | No | Optional endpoint override. |
+| `apiEnvironment` | string | No | Endpoint selection: `auto` (default), `public`, or `pro`. |
+| `baseUrl` | string | No | Legacy field from older connections, still honored if set to a trusted endpoint. |
 
 Base URL resolution:
 
-- If `baseUrl` is provided -> use it.
+- If legacy `baseUrl` is present and trusted -> use it.
+- Else if `apiEnvironment` is `public` -> `https://api.microlink.io`.
+- Else if `apiEnvironment` is `pro` -> `https://pro.microlink.io`.
 - Else if `apiKey` exists -> `https://pro.microlink.io`.
 - Else -> `https://api.microlink.io`.
 

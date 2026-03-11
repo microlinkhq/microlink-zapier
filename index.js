@@ -12,6 +12,9 @@ const logoCreate = require('./creates/logo');
 module.exports = {
   version: require('./package.json').version,
   platformVersion: require('zapier-platform-core').version,
+  flags: {
+    cleanInputData: false
+  },
   authentication,
   triggers: {},
   searches: {},

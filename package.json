@@ -8,12 +8,12 @@
     "test": "node ./node_modules/mocha/bin/mocha --recursive test"
   },
   "dependencies": {
-    "zapier-platform-core": "18.2.3"
+    "zapier-platform-core": "19.0.0"
   },
   "devDependencies": {
     "mocha": "^10.8.2",
     "nock": "^14.0.5",
-    "zapier-platform-cli": "18.2.3"
+    "zapier-platform-cli": "19.0.0"
   },
   "engines": {
     "node": ">=18.0.0"

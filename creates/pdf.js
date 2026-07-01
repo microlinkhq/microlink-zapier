@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'pdf',
-  label: 'PDF',
-  description: 'Generate a PDF',
+  label: 'Generate PDF',
+  noun: 'PDF',
+  description: 'Generate a PDF document of a web page from its URL.',
   sample: {
     status: 'success',
     data: {

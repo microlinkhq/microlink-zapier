@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'audio',
-  label: 'Audio',
-  description: 'Detect playable audio sources',
+  label: 'Detect Audio',
+  noun: 'Audio',
+  description: 'Detect playable audio sources on a web page from its URL.',
   sample: {
     status: 'success',
     data: {

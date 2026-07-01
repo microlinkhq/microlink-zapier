@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'video',
-  label: 'Video',
-  description: 'Detect playable video sources',
+  label: 'Detect Video',
+  noun: 'Video',
+  description: 'Detect playable video sources on a web page from its URL.',
   sample: {
     status: 'success',
     data: {

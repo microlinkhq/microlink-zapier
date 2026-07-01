@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'extract',
-  label: 'Extract',
-  description: 'Return metadata and extracted data for a URL',
+  label: 'Extract Data',
+  noun: 'Data',
+  description: 'Extract metadata and structured data (title, description, author, image, and more) from a URL.',
   sample: {
     status: 'success',
     data: {

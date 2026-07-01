@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'insights',
-  label: 'Insights',
-  description: 'Get performance and technology insights',
+  label: 'Get Insights',
+  noun: 'Insights',
+  description: 'Get performance and technology insights for a web page from its URL.',
   sample: {
     status: 'success',
     data: {

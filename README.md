@@ -13,15 +13,15 @@
   - [Project Setup](#project-setup)
 - [Authentication](#authentication)
 - [Actions (Tools)](#actions-tools)
-  - [Extract](#extract)
-  - [Screenshot](#screenshot)
-  - [PDF](#pdf)
-  - [Markdown](#markdown)
-  - [Text](#text)
-  - [Audio](#audio)
-  - [Video](#video)
-  - [Insights](#insights)
-  - [Logo](#logo)
+  - [Extract Data](#extract-data)
+  - [Create Screenshot](#create-screenshot)
+  - [Generate PDF](#generate-pdf)
+  - [Convert Page to Markdown](#convert-page-to-markdown)
+  - [Extract Text](#extract-text)
+  - [Detect Audio](#detect-audio)
+  - [Detect Video](#detect-video)
+  - [Get Insights](#get-insights)
+  - [Get Logo](#get-logo)
 - [Parameters Reference](#parameters-reference)
   - [Top-level Inputs](#top-level-inputs)
   - [Response Mode](#response-mode)
@@ -108,53 +108,57 @@ Auth test behavior:
 All tools are Zapier `creates` actions and share the same input fields.  
 Each action applies its own default query flags (shown below), then merges optional parameters.
 
+> Note: the visible action **labels** follow Zapier's Verb + Noun naming
+> conventions, while the internal action **keys** stay stable so existing Zaps
+> keep working.
+
 | Action Key | Label | File | Auto Query Params |
 |-----------|-------|------|-------------------|
-| `extract` | Extract | `creates/extract.js` | none |
-| `screenshot` | Screenshot | `creates/screenshot.js` | `screenshot=true` |
-| `pdf` | PDF | `creates/pdf.js` | `pdf=true` |
-| `markdown` | Markdown | `creates/markdown.js` | `force=true`, `meta=false`, `embed=markdown`, `data.markdown.attr=markdown` |
-| `text` | Text | `creates/text.js` | `force=true`, `meta=false`, `embed=text`, `data.text.attr=text` |
-| `audio` | Audio | `creates/audio.js` | `audio=true` |
-| `video` | Video | `creates/video.js` | `video=true` |
-| `insights` | Insights | `creates/insights.js` | `insights=true` |
-| `logo` | Logo | `creates/logo.js` | `palette=true` |
+| `extract` | Extract Data | `creates/extract.js` | none |
+| `screenshot` | Create Screenshot | `creates/screenshot.js` | `screenshot=true` |
+| `pdf` | Generate PDF | `creates/pdf.js` | `pdf=true` |
+| `markdown` | Convert Page to Markdown | `creates/markdown.js` | `force=true`, `meta=false`, `embed=markdown`, `data.markdown.attr=markdown` |
+| `text` | Extract Text | `creates/text.js` | `force=true`, `meta=false`, `embed=text`, `data.text.attr=text` |
+| `audio` | Detect Audio | `creates/audio.js` | `audio=true` |
+| `video` | Detect Video | `creates/video.js` | `video=true` |
+| `insights` | Get Insights | `creates/insights.js` | `insights=true` |
+| `logo` | Get Logo | `creates/logo.js` | `palette=true` |
 
-### Extract
+### Extract Data
 
-Returns metadata and extracted data from a URL.
+Extracts metadata and structured data (title, description, author, image, and more) from a URL.
 
-### Screenshot
+### Create Screenshot
 
-Generates browser-rendered screenshots. Supports viewport and screenshot options.
+Captures a browser-rendered screenshot image of a web page. Supports viewport and screenshot options.
 
-### PDF
+### Generate PDF
 
-Generates PDFs. Supports PDF and viewport options.
+Generates a PDF document of a web page. Supports PDF and viewport options.
 
-### Markdown
+### Convert Page to Markdown
 
-Returns page content in Markdown format (using Microlink embed extraction).
+Converts the readable content of a web page into Markdown (using Microlink embed extraction).
 
-### Text
+### Extract Text
 
-Returns page content as plain text (using Microlink embed extraction).
+Extracts the readable content of a web page as plain text (using Microlink embed extraction).
 
-### Audio
+### Detect Audio
 
-Detects playable audio sources.
+Detects playable audio sources on a web page.
 
-### Video
+### Detect Video
 
-Detects playable video sources.
+Detects playable video sources on a web page.
 
-### Insights
+### Get Insights
 
-Returns performance/technology insights.
+Gets performance and technology insights for a web page.
 
-### Logo
+### Get Logo
 
-Returns logo metadata, including palette data via `palette=true`.
+Gets logo metadata, including its color palette via `palette=true`.
 
 ---
 

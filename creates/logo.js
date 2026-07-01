@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'logo',
-  label: 'Logo',
-  description: 'Return logo metadata, including logo.palette',
+  label: 'Get Logo',
+  noun: 'Logo',
+  description: 'Get logo metadata, including its color palette, for a web page from its URL.',
   sample: {
     status: 'success',
     data: {

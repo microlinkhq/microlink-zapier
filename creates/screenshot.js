@@ -2,8 +2,9 @@ const createMicrolinkAction = require('./action-factory');
 
 module.exports = createMicrolinkAction({
   key: 'screenshot',
-  label: 'Screenshot',
-  description: 'Generate a screenshot',
+  label: 'Create Screenshot',
+  noun: 'Screenshot',
+  description: 'Capture a screenshot image of a web page from its URL.',
   sample: {
     status: 'success',
     data: {

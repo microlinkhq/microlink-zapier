@@ -1,9 +1,9 @@
 const { getCommonInputFields } = require('../lib/input-fields');
 const { performMicrolinkRequest } = require('../lib/microlink');
 
-const createMicrolinkAction = ({ key, label, description, sample }) => ({
+const createMicrolinkAction = ({ key, label, noun, description, sample }) => ({
   key,
-  noun: 'Microlink Result',
+  noun: noun || 'Microlink Result',
   display: {
     label,
     description

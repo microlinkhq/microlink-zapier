@@ -90,7 +90,11 @@ const test = async (z, bundle) => {
 module.exports = {
   type: 'custom',
   test,
-  connectionLabel: '{{bundle.authData.apiEnvironment || "Microlink"}}',
+  // No connectionLabel: Microlink auth has no non-sensitive account identifier
+  // (the API key is a secret), so we leave it blank and let Zapier auto-number
+  // connections. Zapier already prefixes the integration name to each label, so
+  // a hardcoded "Microlink" fallback would be redundant. See publishing
+  // requirement 5.6 and https://docs.zapier.com/integrations/build/connection-label
   fields: [
     {
       key: 'apiKey',

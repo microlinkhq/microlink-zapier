@@ -15,6 +15,8 @@ working.
 7. Update create/video label to "Detect Video"
 8. Update create/insights label to "Get Insights"
 9. Update create/logo label to "Get Logo"
+10. Fix connection label: removed the integration-name fallback so Zapier
+    auto-numbers connections (no sensitive value exposed).
 
 ## 1.0.0
 
